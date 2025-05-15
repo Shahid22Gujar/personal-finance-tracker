@@ -158,3 +158,7 @@
 ### Page
 
 * **SettingsPage**
+
+# Command to deploy project on Netlify
+- `npm install netlify-cli -g`
+- `netlify init`
