@@ -51,3 +51,46 @@
 
 /* Pagination */
 .pagination-controls { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 1rem; }
+
+/* Budget */
+.budget-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+.budget-card { background-color: #f4f4f9; padding: 1rem; border-radius: 0.5rem; width: 200px; }
+.budget-progress { background-color: #e0e0e0; height: 10px; border-radius: 5px; position: relative; }
+.budget-progress .progress-bar-fill { background-color: #3498db; height: 100%; border-radius: 5px; transition: width 0.3s; }
+.budget-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+
+
+/* Setting Page Button */
+.settings-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-settings, .notification-settings {
+  margin-bottom: 20px;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
