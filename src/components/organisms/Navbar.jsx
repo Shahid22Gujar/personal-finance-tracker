@@ -1,4 +1,4 @@
-import Heading from "../atoms/heading";
+import Heading from "../atoms/Heading";
 const Navbar = () => (
   <nav className="navbar">
     <Heading className='text-color'>Personal Finance Tracker</Heading>
