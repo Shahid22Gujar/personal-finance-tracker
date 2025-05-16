@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addTransaction } from "../../slices/transactionSlice";
 import FormField from "../molecules/FormField";
 import Input from "../atoms/Input";
 import Select from "../atoms/Select";
 import Button from "../atoms/Button";
 import Paragraph from "../atoms/Paragraph";
+import { convertDateToDateStr } from "../../utils/utils";
 const TransactionForm = () => {
+  const navigate=useNavigate();
+  const dispatch = useDispatch();
   const [amount, setAmount] = useState(1);
   const [amountError,setAmountError]=useState('')
   const [description, setDescription] = useState('');
@@ -23,12 +29,14 @@ const TransactionForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (amountError||categoryError||typeError||descriptionError){
+    if (amountError){
       alert('Please fix errors to submit form.')
 
     }
     else{
-      alert(`Transaction Added: ${type} - ${category} - $${amount}`);
+      const date = new Date();
+      dispatch(addTransaction({date:convertDateToDateStr(date),type:type,category:category,amount:amount,description:description}));
+      navigate('/history');
     }
     
   };

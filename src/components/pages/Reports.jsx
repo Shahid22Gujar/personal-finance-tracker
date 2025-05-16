@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux"; // used for reading data from redux
 import MainTemplate from "../templates/MainTemplate";
 import Button from "../atoms/Button";
 import DateRangePicker from "../molecules/DateRangerPicker";
@@ -9,11 +10,8 @@ import autoTable from "jspdf-autotable";
 export default function Reports() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [reportData, setReportData] = useState([
-    { name: "Jan", value: 400 },
-    { name: "Feb", value: 300 },
-    { name: "Mar", value: 500 },
-  ]);
+  const {reportData} = useSelector(state=>state.reports) // destructiong state obj
+   
 
   const handleDateChange = (type, value) => {
     if (type === "start") setStartDate(value);

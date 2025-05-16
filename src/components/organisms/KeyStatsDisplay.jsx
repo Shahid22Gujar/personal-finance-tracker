@@ -1,7 +1,7 @@
 import KeyStats from "../molecules/KeyStats";
+import { useSelector } from 'react-redux';
 const KeyStatsDisplay = () => {
-  const topCategory = "Groceries";
-  const biggestExpense = "$500 on Rent";
+  const { topCategory, biggestExpense } = useSelector((state) => state.dashboard);
 
   return (
     <div className="key-stats-display">

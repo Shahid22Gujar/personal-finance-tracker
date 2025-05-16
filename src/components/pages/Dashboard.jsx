@@ -4,7 +4,6 @@ import DashboardLayout from "../templates/DashboardLayout";
 import FinancialSummary from "../organisms/FinancialSummary";
 import SpendingTrends from "../organisms/SpendingTrends";
 import KeyStatsDisplay from "../organisms/KeyStatsDisplay";
-import { Alert } from "../organisms/Alert";
 const DashboardPage = () => {
   const navigate= useNavigate();
   return (
